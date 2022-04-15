@@ -60,6 +60,7 @@ var PATH = {};
     });
   };
 
+
   // TESTIMONIAL SLIDER
   PATH.sliderTestimonial = function () {
     var vswiper = new Swiper(".testimonialSwiper", {
@@ -115,7 +116,6 @@ var PATH = {};
     PATH.sliderVolunteers();
     PATH.heroSlider();
     PATH.causesSlider();
-    PATH.GalleryFilter();
     PATH.counterUp();
   });
 })(jQuery);

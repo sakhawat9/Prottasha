@@ -564,6 +564,34 @@ button {
     scale(1);
 }
 
+
+  /* 12. TESTIMONIALS SECTION */
+  .testimonial-content {
+    margin-left: -50px;
+    border-radius: 5px;
+    box-shadow: 0 8px 48px 0 rgba(0, 0, 0, 0.15);
+    margin-right: 30px;
+    border: 1px solid #e1e1e1;
+  }
+  .testimonial-content blockquote {
+    padding-left: 20px;
+    border-left: 3px solid #38c695;
+  }
+  .swiper-pagination-bullet-active {
+    background: #38c695;
+  }
+  .swiper-container-vertical > .swiper-pagination-bullets {
+    right: 0px;
+  }
+  .swiper-container-vertical
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 12px 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 0px;
+  }
+
 /* 17. FOOTER SECTION */
 .widget-logo {
   font-size: 25px;
