@@ -20,14 +20,6 @@ var PATH = {};
     });
   };
 
-  // VIDEO LIGHTBOX
-  PATH.videoModal = function () {
-    var $jsmodal = $(".js-modal-btn");
-    if ($jsmodal.length) {
-      $jsmodal.modalVideo();
-    }
-  };
-
   // CAUSES LIGHTBOX
   PATH.causesLightBox = function () {
     var $causesLightBox = $(".causes-lightbox");
@@ -113,7 +105,6 @@ var PATH = {};
 
   // Document ready function
   $(function () {
-    PATH.videoModal();
     PATH.causesLightBox();
     PATH.causesProgress();
   });

@@ -512,6 +512,58 @@ button {
   content: "\eac7" !important;
 }
 
+/* 11. DONOR LISTS SECTION */
+.donor-box {
+  position: relative;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+  background: #fff;
+  text-align: center;
+  overflow: hidden;
+  padding: 15px;
+  padding-bottom: 50px;
+  transition: all 0.4s ease-in-out;
+}
+.donor-box:hover {
+  box-shadow: 0 8px 48px 0 rgba(0, 0, 0, 0.15);
+}
+.donor-box img {
+  margin: 0 auto;
+  filter: grayscale(100%);
+  transition: all 0.4s ease-in-out;
+}
+.donor-box:hover img {
+  filter: grayscale(100%);
+  filter: grayscale(0%);
+}
+.donor-box a {
+  position: absolute;
+  left: 50%;
+  color: #000;
+  margin-top: 10px;
+  font-style: italic;
+  transform: translateX(-50%) translateY(50px) translateZ(0) rotate(0deg)
+    scale(1);
+  opacity: 0;
+}
+.donor-box a:hover {
+  color: #38c695;
+}
+.donor-box:hover a {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-20%) translateZ(0) rotate(0deg)
+    scale(1);
+}
+.donor-box.corporate-donor {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.donor-box.corporate-donor:hover a {
+  transform: translateX(-50%) translateY(-50%) translateZ(0) rotate(0deg)
+    scale(1);
+}
+
 /* 17. FOOTER SECTION */
 .widget-logo {
   font-size: 25px;
