@@ -124,28 +124,10 @@ var PATH = {};
 		}
 	}
 
-	/******************** 13. GALLERY LIGHTBOX ********************/
-	PATH.GalleryLightBox = function () {
-	var $galleryLightBox = $('.gallery-icon');
-	if ($galleryLightBox.length) {
-		$galleryLightBox.magnificPopup({
-			type: 'image',
-			mainClass: 'mfp-fade',
-			removalDelay: 160,
-			fixedContentPos: true,
-			delegate: 'a',
-			gallery: {
-				enabled: true
-			}
-		});
-	}
-	}
-
   // Document ready function
   $(function () {
     PATH.causesLightBox();
     PATH.causesProgress();
-    PATH.GalleryLightBox();
   });
 
   // Window on load function
