@@ -591,136 +591,135 @@ button {
   border-radius: 0px;
 }
 
-
-  /* 15. BLOG SECTION */
-  .single-blog-wrap {
-    transition: all 0.4s ease-out;
-    overflow: hidden;
-  }
-  .single-blog-wrap:hover {
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.05);
-  }
-  .single-blog {
-    position: relative;
-  }
-  .post-header {
-    background: #fff;
-    padding-left: 75px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 15px;
-    position: relative;
-    min-height: 90px;
-  }
-  .white-bg .post-header {
-    background-color: #f1f1f1;
-  }
-  .post-header h3 {
-    font-size: 22px;
-    margin: 0px;
-  }
-  .post-header a {
-    color: #000;
-  }
-  .post-header a:hover {
-    color: #38c695;
-  }
-  .post-header a.date {
-    margin-left: -65px;
-    width: 50px;
-    float: left;
-    text-align: center;
-    margin-right: auto;
-    display: block;
-    position: relative;
-  }
-  .post-header a span.day {
-    background: #38c695;
-    padding: 3px 0px;
-    color: #fff;
-    font-size: 16px;
-    display: block;
-  }
-  .post-header a span.month {
-    background: #f1f1f1;
-    padding: 3px 0px;
-    color: #000;
-    font-size: 16px;
-    display: block;
-  }
-  .post-content {
-    top: -50px;
-    padding: 15px;
-    position: absolute;
-    transition: all 0.4s ease-out;
-    opacity: 0;
-  }
-  .single-blog-wrap:hover .post-content {
-    top: 0;
-    opacity: 1;
-  }
-  .single-blog:before {
-    width: 0px;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: #000;
-    content: "";
-    opacity: 0;
-  }
-  .single-blog-wrap:hover .single-blog:before {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-  }
-  .post-info h3 {
-    color: #fff;
-  }
-  .post-info {
-    color: #fff;
-    padding: 15px;
-    position: absolute;
-    bottom: -80px;
-    transition: all 0.4s ease-out;
-    opacity: 0;
-  }
-  .single-blog-wrap:hover .post-info {
-    bottom: 0px;
-    opacity: 1;
-  }
-  .post-content p {
-    color: #fff;
-  }
-  .post-info a,
-  .post-content a {
-    color: #fff;
-    font-weight: 600;
-  }
-  .post-info a:hover,
-  .post-content a:hover {
-    color: #38c695;
-  }
-  .post-info ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .post-info ul li {
-    float: left;
-    display: inline-block;
-    margin-left: 10px;
-    border-right: 1px solid #e1e1e1;
-    padding-right: 10px;
-    line-height: 14px;
-    font-size: 14px;
-  }
-  .post-info ul li:first-child {
-    margin-left: 0px;
-  }
-  .post-info ul li:last-child {
-    border: none;
-  }
+/* 15. BLOG SECTION */
+.single-blog-wrap {
+  transition: all 0.4s ease-out;
+  overflow: hidden;
+}
+.single-blog-wrap:hover {
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.05);
+}
+.single-blog {
+  position: relative;
+}
+.post-header {
+  background: #fff;
+  padding-left: 75px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 90px;
+}
+.white-bg .post-header {
+  background-color: #f1f1f1;
+}
+.post-header h3 {
+  font-size: 22px;
+  margin: 0px;
+}
+.post-header a {
+  color: #000;
+}
+.post-header a:hover {
+  color: #38c695;
+}
+.post-header a.date {
+  margin-left: -65px;
+  width: 50px;
+  float: left;
+  text-align: center;
+  margin-right: auto;
+  display: block;
+  position: relative;
+}
+.post-header a span.day {
+  background: #38c695;
+  padding: 3px 0px;
+  color: #fff;
+  font-size: 16px;
+  display: block;
+}
+.post-header a span.month {
+  background: #f1f1f1;
+  padding: 3px 0px;
+  color: #000;
+  font-size: 16px;
+  display: block;
+}
+.post-content {
+  top: -50px;
+  padding: 15px;
+  position: absolute;
+  transition: all 0.4s ease-out;
+  opacity: 0;
+}
+.single-blog-wrap:hover .post-content {
+  top: 0;
+  opacity: 1;
+}
+.single-blog:before {
+  width: 0px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #000;
+  content: "";
+  opacity: 0;
+}
+.single-blog-wrap:hover .single-blog:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+.post-info h3 {
+  color: #fff;
+}
+.post-info {
+  color: #fff;
+  padding: 15px;
+  position: absolute;
+  bottom: -80px;
+  transition: all 0.4s ease-out;
+  opacity: 0;
+}
+.single-blog-wrap:hover .post-info {
+  bottom: 0px;
+  opacity: 1;
+}
+.post-content p {
+  color: #fff;
+}
+.post-info a,
+.post-content a {
+  color: #fff;
+  font-weight: 600;
+}
+.post-info a:hover,
+.post-content a:hover {
+  color: #38c695;
+}
+.post-info ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.post-info ul li {
+  float: left;
+  display: inline-block;
+  margin-left: 10px;
+  border-right: 1px solid #e1e1e1;
+  padding-right: 10px;
+  line-height: 14px;
+  font-size: 14px;
+}
+.post-info ul li:first-child {
+  margin-left: 0px;
+}
+.post-info ul li:last-child {
+  border: none;
+}
 
 /* 17. FOOTER SECTION */
 .widget-logo {
@@ -818,6 +817,113 @@ ul.photo-gallery li:before {
   font-size: 45px;
   line-height: 50px;
   display: block;
+}
+
+/* 16. GET IN TOUCH SECTION */
+.email-success,
+.email-failed,
+.email-loading,
+.success-msg,
+.error-msg {
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+  display: none;
+}
+.email-loading img {
+  width: 20px;
+  margin: 0 auto;
+}
+.email-failed .icon {
+  font-size: 20px;
+  position: relative;
+  top: 5px;
+}
+.email-failed .icon,
+.email-success .icon,
+.error-msg .icon,
+.success-msg .icon {
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+}
+/* 16.1 FORM STYLE */
+.contact-form-box {
+  padding: 40px;
+}
+.contact-form-box input,
+.contact-form-box textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  border-bottom: 2px solid transparent;
+}
+.contact-form-box input:focus,
+.contact-form-box textarea:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #38c695;
+}
+.gray-bg .contact-form-box input,
+.gray-bg .contact-form-box textarea {
+  background-color: #f4f4f4;
+}
+.contact-form-box textarea {
+  min-height: 120px;
+  transition: all 0.3s ease-in-out;
+}
+/* 16.2 ADDRESS AREA */
+.address-wrap {
+  height: 100%;
+}
+.address-wrap ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.address-wrap ul li,
+.address-wrap ul li a {
+  display: block;
+  margin-bottom: 30px;
+  font-weight: 400;
+  color: #6c757d;
+}
+.address-wrap ul li a:hover {
+  color: #38c695;
+}
+.address-wrap ul li span {
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: #000;
+}
+.address-wrap ul.social-icons {
+  display: block;
+}
+.address-wrap h4 {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.address-wrap ul.social-icons li {
+  margin-bottom: 0px;
+  float: none;
+  display: inline;
+  margin: 0;
+  margin-right: 5px;
+}
+.address-wrap ul.social-icons li a {
+  margin: 0px;
+  border-color: #e1e1e1;
+  display: inline-block;
+  color: #38c695;
+}
+.address-wrap ul.social-icons li a:hover {
+  color: #fff;
 }
 
 /* 17.1 FOOTER COPYRIGHT */
