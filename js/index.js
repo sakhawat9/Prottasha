@@ -60,7 +60,6 @@ var PATH = {};
     });
   };
 
-
   // TESTIMONIAL SLIDER
   PATH.sliderTestimonial = function () {
     var vswiper = new Swiper(".testimonialSwiper", {
@@ -104,10 +103,49 @@ var PATH = {};
     });
   };
 
+  /******************** 12. GALLERY FILTER ********************/
+  PATH.GalleryFilter = function () {
+		var $portfolio_selectors = $('.gallery-filter >li>a');
+		if ($portfolio_selectors.length) {
+			var $portfolio = $('.gallery-boxes');
+			$portfolio.isotope({
+				itemSelector: '.gallery-box',
+				layoutMode: 'fitRows'
+			});
+			$portfolio_selectors.on('click', function () {
+				$portfolio_selectors.removeClass('active');
+				$(this).addClass('active');
+				var selector = $(this).attr('data-filter');
+				$portfolio.isotope({
+					filter: selector
+				});
+				return false;
+			});
+		}
+	}
+
+	/******************** 13. GALLERY LIGHTBOX ********************/
+	PATH.GalleryLightBox = function () {
+	var $galleryLightBox = $('.gallery-icon');
+	if ($galleryLightBox.length) {
+		$galleryLightBox.magnificPopup({
+			type: 'image',
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
+			fixedContentPos: true,
+			delegate: 'a',
+			gallery: {
+				enabled: true
+			}
+		});
+	}
+	}
+
   // Document ready function
   $(function () {
     PATH.causesLightBox();
     PATH.causesProgress();
+    PATH.GalleryLightBox();
   });
 
   // Window on load function
@@ -116,6 +154,7 @@ var PATH = {};
     PATH.sliderVolunteers();
     PATH.heroSlider();
     PATH.causesSlider();
+    PATH.GalleryFilter();
     PATH.counterUp();
   });
 })(jQuery);
