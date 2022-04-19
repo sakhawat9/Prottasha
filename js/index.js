@@ -20,6 +20,8 @@ var PATH = {};
     });
   };
 
+
+
   // CAUSES LIGHTBOX
   PATH.causesLightBox = function () {
     var $causesLightBox = $(".causes-lightbox");
