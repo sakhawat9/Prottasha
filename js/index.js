@@ -2,6 +2,59 @@ var PATH = {};
 (function ($) {
   "use strict";
 
+  /******************** 1. PRELOADER ********************/
+	PATH.preLoader = function () {
+		$(".preloader").fadeOut();
+			$("#preloader-wrap").delay(1000).fadeOut("slow");
+	}
+
+	/******************** 2. ADD CLASS HEADER ********************/
+	PATH.HeaderSticky = function () {
+		$(".navbar-toggler").on("click", function (a) {
+			a.preventDefault(),
+				$(".navbar").addClass("fixed-header")
+		});
+	}
+
+	/******************** 3. NAV COLLAPSE ********************/
+	PATH.MenuClose = function () {
+		$('.navbar-nav .nav-link').on('click', function () {
+			var toggle = $('.navbar-toggler').is(':visible');
+			if (toggle) {
+				$('.navbar-collapse').collapse('hide');
+			}
+		});
+	}
+
+	/******************** 4. NAV SMOOTH SCROLL ********************/
+	PATH.HeaderScroll = function () {
+		$('header a[href*="#"]:not([href="#"])').on('click', function () {
+			var PathName = location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname;
+			if (PathName) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top - 65,
+					}, 1000);
+					return false;
+				}
+			}
+		});
+	}
+
+	/******************** 5. FIXED HEADER ********************/
+	PATH.HeaderFixed = function () {
+		var varHeaderFix = $(window).scrollTop() >= 60,
+		$navbar = $('.navbar');
+		if (varHeaderFix) {
+			$navbar.addClass('fixed-header');
+		} else {
+			$navbar.removeClass('fixed-header');
+		}
+	}
+
+
   //  HERO SLIDER
   PATH.heroSlider = function () {
     var swiper = new Swiper(".hero-swiper", {
@@ -129,8 +182,16 @@ var PATH = {};
   // Document ready function
   $(function () {
     PATH.causesLightBox();
-    PATH.causesProgress();
+    PATH.MenuClose(),
+    PATH.HeaderScroll(),
+    // PATH.causesProgress();
+    PATH.HeaderSticky();
   });
+
+  /* Window on scroll function */
+	$(window).on("scroll", function () {
+		PATH.HeaderFixed();
+	});
 
   // Window on load function
   $(window).on("load", function () {
@@ -139,6 +200,6 @@ var PATH = {};
     PATH.heroSlider();
     PATH.causesSlider();
     PATH.GalleryFilter();
-    PATH.counterUp();
+    PATH.preLoader();
   });
 })(jQuery);
