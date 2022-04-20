@@ -253,6 +253,9 @@ hr {
   margin-top: 35px;
   margin-bottom: 35px;
 }
+.m-35px-b {
+  margin-bottom: 35px;
+}
 /*Margin top*/
 .m-0px-t {
   margin-top: 0px;

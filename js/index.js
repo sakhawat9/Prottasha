@@ -88,6 +88,27 @@ var PATH = {};
     }
   };
 
+  // CAUSES PROGRESS BARS 
+	PATH.causesProgress = function(){
+		var $skills = $('.content-box'),
+		$skillProgressBars = $skills.find('.progress-bars');
+	
+	if ($skillProgressBars.length) {
+		$skillProgressBars.find('.progress-bar').each(function () {
+			var $t = $(this);
+	
+			$t.css('width', 0);
+	
+			$t.waypoint(function () {
+				$t.css('width', $t.data('value') + '%');
+			}, {
+				triggerOnce: true,
+				offset: 'bottom-in-view'
+			});
+		});
+	}
+	}
+
   // CAUSES SLIDER
   PATH.causesSlider = function () {
     var cswiper = new Swiper(".causes-swiper", {
@@ -184,7 +205,7 @@ var PATH = {};
     PATH.causesLightBox();
     PATH.MenuClose(),
     PATH.HeaderScroll(),
-    // PATH.causesProgress();
+    PATH.causesProgress();
     PATH.HeaderSticky();
   });
 

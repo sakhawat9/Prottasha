@@ -214,6 +214,12 @@
   background-image: url(../images/bg/video-promo.jpg);
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.514);
 }
+.js-modal-btn a {
+  color: #fff;
+}
+.js-modal-btn:hover a {
+  color: #38c695;
+}
 .promo-video,
 .promo-video h1,
 .promo-video h2,
@@ -303,6 +309,7 @@ button {
 .content-area a:hover {
   color: #38c695;
 }
+
 .content-footer p {
   margin-bottom: 0px;
 }
@@ -326,19 +333,69 @@ button {
   border-left: none;
 }
 
-.swiper-container-horizontal
-  > .swiper-pagination-bullets
-  .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  border-radius: 0px;
-  margin: 0px 10px;
+.progress-bars .progress {
+	position: relative;
+	height: auto;
+	margin-bottom: 0;
+	background-color: transparent;
+	border-radius: 0;
+	box-shadow: none;
+	overflow: visible;
+	z-index: 0;
 }
-.swiper-container-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
-  bottom: 0px;
+.progress-bars .progress+.progress {
+	margin-top: 17px;
 }
+.progress-bars .progress:before {
+	content: " ";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 6px;
+	background-color: #fafafa;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.progress-bars .progress p {
+	margin-bottom: 8px;
+	font-size: 14px;
+	line-height: 24px;
+}
+.progress-bars .progress .progress-bar {
+	float: none;
+	position: relative;
+	min-width: 40px;
+	height: 6px;
+	background-color: #38C695;
+	box-shadow: none;
+	font-size: 14px;
+	line-height: 22px;
+	transition: width 1s ease-in-out .3s;
+}
+.progress-bars .progress .progress-bar span {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 40px;
+	margin-top: -17px;
+	padding: 5px 0;
+	background-color: #fff;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+	font-weight: 500;
+	text-align: center;
+	color: #525252
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+	width:10px;
+	height:10px;
+	border-radius:0px;
+	margin:0px 10px;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+	bottom: 0px;
+}
+
 /* 8. HELPING PROCESS SECTION */
 .helping-wrap {
   border-top: 2px solid #38c695;
