@@ -349,3 +349,132 @@ img.mfp-img {
   .mfp-container {
     padding-left: 6px;
     padding-right: 6px; } }
+
+
+    /* ----------------------------------------------------------------
+Magnific Popup Customisation for Smooth PopUp
+-------------------------------------------------------------------*/
+.mfp-fade.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: 0.75;
+}
+.mfp-bottom-bar {
+	display: none;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: 0;
+}
+.mfp-arrow-right::after,
+.mfp-arrow-left::after {
+	font-family: 'FontAwesome';
+	border: none !important;
+	color: #fff;
+	font-size: 65px;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+.mfp-arrow-right::after {
+	content: "\f105" !important;
+}
+.mfp-arrow-left::after {
+	content: "\f104" !important;
+}
+.mfp-arrow-right::before,
+.mfp-arrow-left::before {
+	border: none !important;
+}
+.mfp-arrow {
+	height: 60px;
+}
+.mfp-arrow::before,
+.mfp-arrow::after,
+.mfp-arrow .mfp-b,
+.mfp-arrow .mfp-a {
+	margin-top: 15px;
+	top: -1px !important;
+}
+img.mfp-img {
+	padding: 40px 0px 0;
+}
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	transform: scale(0.95);
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	transform: scale(1);
+	opacity: 1;
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
+	transform: scale(0.95);
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}
+
+/* 
+
+====== "Hinge" close effect ======
+
+*/
+@keyframes hinge {
+	0% {
+		transform: rotate(0);
+		transform-origin: top left;
+		animation-timing-function: ease-in-out;
+	}
+	
+	20%,
+	60% {
+		transform: rotate(80deg);
+		transform-origin: top left;
+		animation-timing-function: ease-in-out;
+	}
+	
+	40% {
+		transform: rotate(60deg);
+		transform-origin: top left;
+		animation-timing-function: ease-in-out;
+	}
+	
+	80% {
+		transform: rotate(60deg) translateY(0);
+		opacity: 1;
+		transform-origin: top left;
+		animation-timing-function: ease-in-out;
+	}
+	
+	100% {
+		transform: translateY(700px);
+		opacity: 0;
+	}
+}
+.hinge {
+	animation-duration: 1s;
+	animation-name: hinge;
+}
+.mfp-with-fade .mfp-content,
+.mfp-with-fade.mfp-bg {
+	opacity: 0;
+	transition: opacity .5s ease-out;
+}
+.mfp-with-fade.mfp-ready .mfp-content {
+	opacity: 1;
+}
+.mfp-with-fade.mfp-ready.mfp-bg {
+	opacity: 0.8;
+}
+.mfp-with-fade.mfp-removing.mfp-bg {
+	opacity: 0;
+}
